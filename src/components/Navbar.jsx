@@ -165,7 +165,12 @@ const Navbar = () => {
           </div>
 
           <Button className="bg-yellow-500 hover:bg-yellow-400 text-black font-semibold">
-            Book Now
+             <a
+                href="tel:+918854954525"
+                className="font-bold hover:text-yellow-500"
+              >
+                Book Now
+              </a>
           </Button>
 
         </div>
