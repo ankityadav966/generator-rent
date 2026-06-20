@@ -10,6 +10,7 @@ import {
   Mail,
   MapPin,
 } from "lucide-react";
+import logo from "../assets/logo.jpeg"
 
 
 const Footer = () => {
@@ -27,8 +28,9 @@ const Footer = () => {
           <div className="lg:col-span-1">
 
             <div className="flex items-center gap-3">
+          <img style={{width:"200px"}} src={logo} alt="" />
 
-              <div className="bg-yellow-500 w-12 h-12 rounded-full flex items-center justify-center text-black text-2xl font-bold">
+              {/* <div className="bg-yellow-500 w-12 h-12 rounded-full flex items-center justify-center text-black text-2xl font-bold">
                 ⚡
               </div>
 
@@ -42,7 +44,7 @@ const Footer = () => {
                   RENT
                 </p>
 
-              </div>
+              </div> */}
 
             </div>
 
@@ -171,34 +173,46 @@ const Footer = () => {
 
             <div className="space-y-5 text-gray-300">
 
-              <div className="flex gap-3">
+  <div className="flex gap-3">
 
-                <Phone className="text-yellow-500" size={18} />
+    <Phone className="text-yellow-500" size={18} />
 
-                <p>+92 300 1234567</p>
+    <a
+      href="tel:+918854954525"
+      className="hover:text-yellow-500"
+    >
+      +91 8854954525
+    </a>
 
-              </div>
+  </div>
 
-              <div className="flex gap-3">
+  <div className="flex gap-3">
 
-                <Mail className="text-yellow-500" size={18} />
+    <Mail className="text-yellow-500" size={18} />
 
-                <p>info@generatorrent.com</p>
+    <a
+      href="mailto:vinayvssaini45254525@gmail.com"
+      className="hover:text-yellow-500 break-all"
+    >
+      vinayvssaini45254525@gmail.com
+    </a>
 
-              </div>
+  </div>
 
-              <div className="flex gap-3">
+  <div className="flex gap-3">
 
-                <MapPin className="text-yellow-500" size={18} />
+    <MapPin className="text-yellow-500 shrink-0" size={18} />
 
-                <p>
-                  123 Main Street, Lahore,
-                  Pakistan
-                </p>
+    <p>
+      Govind Nagar, Plot No. 64,
+      Harmada, Jaipur,
+      Near VKI (Vishwakarma Industrial Area),
+      Rajasthan, India
+    </p>
 
-              </div>
+  </div>
 
-            </div>
+</div>
 
           </div>
 
@@ -234,7 +248,7 @@ const Footer = () => {
         <div className="border-t border-gray-700 mt-14 pt-8 flex flex-col md:flex-row justify-between items-center gap-5">
 
           <p className="text-gray-400 text-sm">
-            © 2024 Generator Rent. All Rights Reserved.
+           © 2026 Generator Rent. All Rights Reserved.
           </p>
 
           <div className="flex gap-6 text-gray-400 text-sm">

@@ -3,6 +3,7 @@ import { Phone, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button"; 
 import { NavLink } from "react-router-dom";
+import logo from "../assets/logo.jpeg"
 // import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
@@ -10,12 +11,13 @@ const Navbar = () => {
   return (
     <nav className="bg-white w-full shadow-sm sticky top-0 z-50">
 
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6  flex items-center justify-between">
 
         {/* Logo */}
 
         <div className="flex items-center gap-3">
-
+          <img style={{width:"200px"}} src={logo} alt="" />
+{/* 
           <div className="bg-yellow-500 w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-xl">
             ⚡
           </div>
@@ -28,7 +30,7 @@ const Navbar = () => {
             <p className="text-yellow-500 font-semibold text-sm">
               RENT
             </p>
-          </div>
+          </div> */}
 
         </div>
 
