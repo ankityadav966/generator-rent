@@ -49,7 +49,7 @@ const Hero = () => {
   }, [api]);
 
   return (
-    <section className="bg-[#07162b] min-h-screen text-white overflow-hidden">
+    <section className="bg-[#07162b] min-h-screen text-white overflow-hidden font-serif">
 
       <Carousel
         setApi={setApi}
@@ -66,22 +66,22 @@ const Hero = () => {
               <div className="max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-10 items-center min-h-screen">
 
                 {/* LEFT SIDE */}
-                <div>
-                  <div className="bg-[#13233d] inline-block px-5 py-2 rounded-full text-yellow-400 text-sm mb-6">
+                <div className="animate-fade-in-right animate-duration-1000">
+                  <div className="bg-[#13233d] inline-block px-5 py-2 rounded-full text-yellow-400 text-sm mb-6 border border-yellow-700/50 shadow-[0_0_15px_rgba(234,179,8,0.2)]">
                     {slide.badge}
                   </div>
 
-                  <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
+                  <h1 className="text-5xl lg:text-7xl font-bold leading-tight drop-shadow-lg">
                     {slide.title}
                   </h1>
 
-                  <p className="text-gray-300 text-lg mt-6 max-w-xl">
+                  <p className="text-gray-300 text-lg mt-6 max-w-xl italic">
                     {slide.desc}
                   </p>
 
-                  <div className="flex gap-5 mt-10">
+                  <div className="flex gap-5 mt-10 animate-fade-in-up animate-delay-500">
                     <Button
-                     className="bg-yellow-500 hover:bg-yellow-400 text-black px-8 py-6 text-lg">
+                     className="bg-yellow-600 hover:bg-yellow-500 text-black px-8 py-6 text-lg border-2 border-yellow-700 transition-all hover:scale-105 shadow-[0_0_10px_rgba(234,179,8,0.4)]">
                       <a
                 href="tel:+918854954525"
                 className="font-bold "
@@ -94,7 +94,7 @@ const Hero = () => {
 
                     <Button
                       variant="outline"
-                      className="border-yellow-500 text-black hover:bg-yellow-500 px-8 py-6 text-lg"
+                      className="border-yellow-600 text-black hover:bg-yellow-500 px-8 py-6 text-lg transition-all hover:scale-105 bg-white/10 text-white backdrop-blur-sm"
                     >
                       View Generators
                     </Button>
@@ -103,11 +103,13 @@ const Hero = () => {
                 </div>
 
                 {/* RIGHT SIDE */}
-                <div className="relative">
+                <div className="relative animate-fade-in-left animate-duration-1000">
+                  {/* Added a subtle glow behind the generator for a vintage cinematic look */}
+                  <div className="absolute inset-0 bg-yellow-500/20 blur-[100px] rounded-full animate-pulse"></div>
                   <img
                     src={slide.img}
                     alt="generator"
-                    className="w-full h-[450px] object-contain"
+                    className="w-full h-[450px] object-contain relative z-10 drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] sepia-[0.3] hover:sepia-0 transition-all duration-700"
                   />
                 </div>
 
@@ -118,8 +120,8 @@ const Hero = () => {
         </CarouselContent>
 
         {/* Hover Arrows */}
-        <CarouselPrevious className="opacity-0 group-hover:opacity-100 transition-opacity left-4" />
-        <CarouselNext className="opacity-0 group-hover:opacity-100 transition-opacity right-4" />
+        <CarouselPrevious className="opacity-0 group-hover:opacity-100 transition-opacity left-4 bg-yellow-600 border-none text-black hover:bg-yellow-500" />
+        <CarouselNext className="opacity-0 group-hover:opacity-100 transition-opacity right-4 bg-yellow-600 border-none text-black hover:bg-yellow-500" />
 
       </Carousel>
 

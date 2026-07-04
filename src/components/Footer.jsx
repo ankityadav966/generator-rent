@@ -10,14 +10,14 @@ import {
   Mail,
   MapPin,
 } from "lucide-react";
-import logo from "../assets/logo.jpeg"
-
+import logo from "../assets/logo.jpeg";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#03152e] text-white pt-16 pb-8">
-
-      <div className="max-w-7xl mx-auto px-6">
+    <footer className="bg-[#0f1419] text-[#e8e4db] pt-16 pb-8 font-serif border-t-4 border-yellow-900/30 relative overflow-hidden">
+      
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
 
         {/* Top Footer */}
 
@@ -25,30 +25,19 @@ const Footer = () => {
 
           {/* Logo Section */}
 
-          <div className="lg:col-span-1">
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-1"
+          >
 
             <div className="flex items-center gap-3">
-          <img style={{width:"200px"}} src={logo} alt="" />
-
-              {/* <div className="bg-yellow-500 w-12 h-12 rounded-full flex items-center justify-center text-black text-2xl font-bold">
-                ⚡
-              </div>
-
-              <div>
-
-                <h1 className="text-2xl font-bold leading-none">
-                  GENERATOR
-                </h1>
-
-                <p className="text-yellow-500 font-semibold">
-                  RENT
-                </p>
-
-              </div> */}
-
+              <img style={{width:"180px"}} src={logo} alt="Logo" className="sepia-[0.3] rounded-md border border-yellow-900/40 p-1 bg-white" />
             </div>
 
-            <p className="text-gray-300 mt-6 leading-7">
+            <p className="text-gray-400 mt-6 leading-7 italic">
               Your trusted partner for reliable and
               affordable generator rental services.
               Power anytime, anywhere.
@@ -56,175 +45,181 @@ const Footer = () => {
 
             {/* Social Icons */}
  
-<div className="flex gap-4 mt-8">
+            <div className="flex gap-4 mt-8">
 
-  {/* Facebook */}
+              {/* Facebook */}
+              <div className="border border-yellow-700 w-11 h-11 rounded-full flex items-center justify-center hover:bg-yellow-700 hover:text-white hover:scale-110 transition-all cursor-pointer shadow-md">
+                <FaFacebookF size={16} />
+              </div>
 
-  <div className="border border-yellow-500 w-11 h-11 rounded-full flex items-center justify-center hover:bg-yellow-500 hover:text-black transition cursor-pointer">
-    <FaFacebookF size={16} />
-  </div>
+              {/* Instagram */}
+              <div className="border border-yellow-700 w-11 h-11 rounded-full flex items-center justify-center hover:bg-yellow-700 hover:text-white hover:scale-110 transition-all cursor-pointer shadow-md">
+                <FaInstagram size={16} />
+              </div>
 
-  {/* Instagram */}
+              {/* Youtube */}
+              <div className="border border-yellow-700 w-11 h-11 rounded-full flex items-center justify-center hover:bg-yellow-700 hover:text-white hover:scale-110 transition-all cursor-pointer shadow-md">
+                <FaYoutube size={16} />
+              </div>
 
-  <div className="border border-yellow-500 w-11 h-11 rounded-full flex items-center justify-center hover:bg-yellow-500 hover:text-black transition cursor-pointer">
-    <FaInstagram size={16} />
-  </div>
+              {/* Twitter/X */}
+              <div className="border border-yellow-700 w-11 h-11 rounded-full flex items-center justify-center hover:bg-yellow-700 hover:text-white hover:scale-110 transition-all cursor-pointer shadow-md">
+                <FaXTwitter size={16} />
+              </div>
 
-  {/* Youtube */}
+            </div>
 
-  <div className="border border-yellow-500 w-11 h-11 rounded-full flex items-center justify-center hover:bg-yellow-500 hover:text-black transition cursor-pointer">
-    <FaYoutube size={16} />
-  </div>
-
-  {/* Twitter/X */}
-
-  <div className="border border-yellow-500 w-11 h-11 rounded-full flex items-center justify-center hover:bg-yellow-500 hover:text-black transition cursor-pointer">
-    <FaXTwitter size={16} />
-  </div>
-
-</div>
-
-
-          </div>
+          </motion.div>
 
           {/* Quick Links */}
 
-          <div>
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
 
-            <h2 className="text-xl font-bold mb-6">
+            <h2 className="text-xl font-bold mb-6 text-yellow-600 tracking-wide border-b border-yellow-900/50 inline-block pb-1">
               Quick Links
             </h2>
 
-            <ul className="space-y-4 text-gray-300">
+            <ul className="space-y-4 text-gray-400">
 
-              <li className="hover:text-yellow-500 cursor-pointer">
+              <li className="hover:text-yellow-500 hover:translate-x-1 transition-transform cursor-pointer">
                 Home
               </li>
 
-              <li className="hover:text-yellow-500 cursor-pointer">
+              <li className="hover:text-yellow-500 hover:translate-x-1 transition-transform cursor-pointer">
                 Generators
               </li>
 
-              <li className="hover:text-yellow-500 cursor-pointer">
+              <li className="hover:text-yellow-500 hover:translate-x-1 transition-transform cursor-pointer">
                 About Us
               </li>
 
-              <li className="hover:text-yellow-500 cursor-pointer">
+              <li className="hover:text-yellow-500 hover:translate-x-1 transition-transform cursor-pointer">
                 How It Works
               </li>
 
-              <li className="hover:text-yellow-500 cursor-pointer">
+              <li className="hover:text-yellow-500 hover:translate-x-1 transition-transform cursor-pointer">
                 FAQs
               </li>
 
-              <li className="hover:text-yellow-500 cursor-pointer">
+              <li className="hover:text-yellow-500 hover:translate-x-1 transition-transform cursor-pointer">
                 Contact Us
               </li>
 
             </ul>
 
-          </div>
+          </motion.div>
 
           {/* Services */}
 
-          <div>
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
 
-            <h2 className="text-xl font-bold mb-6">
+            <h2 className="text-xl font-bold mb-6 text-yellow-600 tracking-wide border-b border-yellow-900/50 inline-block pb-1">
               Our Services
             </h2>
 
-            <ul className="space-y-4 text-gray-300">
+            <ul className="space-y-4 text-gray-400">
 
-              <li className="hover:text-yellow-500 cursor-pointer">
+              <li className="hover:text-yellow-500 hover:translate-x-1 transition-transform cursor-pointer">
                 Home Use
               </li>
 
-              <li className="hover:text-yellow-500 cursor-pointer">
+              <li className="hover:text-yellow-500 hover:translate-x-1 transition-transform cursor-pointer">
                 Office Use
               </li>
 
-              <li className="hover:text-yellow-500 cursor-pointer">
+              <li className="hover:text-yellow-500 hover:translate-x-1 transition-transform cursor-pointer">
                 Events
               </li>
 
-              <li className="hover:text-yellow-500 cursor-pointer">
+              <li className="hover:text-yellow-500 hover:translate-x-1 transition-transform cursor-pointer">
                 Construction Sites
               </li>
 
-              <li className="hover:text-yellow-500 cursor-pointer">
+              <li className="hover:text-yellow-500 hover:translate-x-1 transition-transform cursor-pointer">
                 Industries
               </li>
 
-              <li className="hover:text-yellow-500 cursor-pointer">
+              <li className="hover:text-yellow-500 hover:translate-x-1 transition-transform cursor-pointer">
                 Emergency Backup
               </li>
 
             </ul>
 
-          </div>
+          </motion.div>
 
           {/* Contact */}
 
-          <div>
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+          >
 
-            <h2 className="text-xl font-bold mb-6">
+            <h2 className="text-xl font-bold mb-6 text-yellow-600 tracking-wide border-b border-yellow-900/50 inline-block pb-1">
               Contact Us
             </h2>
 
-            <div className="space-y-5 text-gray-300">
+            <div className="space-y-5 text-gray-400">
 
-  <div className="flex gap-3">
+              <div className="flex gap-3">
+                <Phone className="text-yellow-600" size={18} />
+                <a
+                  href="tel:+918854954525"
+                  className="hover:text-yellow-500 transition-colors"
+                >
+                  +91 8854954525
+                </a>
+              </div>
 
-    <Phone className="text-yellow-500" size={18} />
+              <div className="flex gap-3">
+                <Mail className="text-yellow-600" size={18} />
+                <a
+                  href="mailto:vinayvssaini45254525@gmail.com"
+                  className="hover:text-yellow-500 break-all transition-colors"
+                >
+                  vinayvssaini45254525@gmail.com
+                </a>
+              </div>
 
-    <a
-      href="tel:+918854954525"
-      className="hover:text-yellow-500"
-    >
-      +91 8854954525
-    </a>
+              <div className="flex gap-3">
+                <MapPin className="text-yellow-600 shrink-0" size={18} />
+                <p className="italic">
+                  Govind Nagar, Plot No. 64,
+                  Harmada, Jaipur,
+                  Near VKI,
+                  Rajasthan, India
+                </p>
+              </div>
 
-  </div>
+            </div>
 
-  <div className="flex gap-3">
-
-    <Mail className="text-yellow-500" size={18} />
-
-    <a
-      href="mailto:vinayvssaini45254525@gmail.com"
-      className="hover:text-yellow-500 break-all"
-    >
-      vinayvssaini45254525@gmail.com
-    </a>
-
-  </div>
-
-  <div className="flex gap-3">
-
-    <MapPin className="text-yellow-500 shrink-0" size={18} />
-
-    <p>
-      Govind Nagar, Plot No. 64,
-      Harmada, Jaipur,
-      Near VKI (Vishwakarma Industrial Area),
-      Rajasthan, India
-    </p>
-
-  </div>
-
-</div>
-
-          </div>
+          </motion.div>
 
           {/* Newsletter */}
 
-          <div>
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.8 }}
+          >
 
-            <h2 className="text-xl font-bold mb-6">
+            <h2 className="text-xl font-bold mb-6 text-yellow-600 tracking-wide border-b border-yellow-900/50 inline-block pb-1">
               Newsletter
             </h2>
 
-            <p className="text-gray-300 leading-7">
+            <p className="text-gray-400 leading-7 italic">
               Subscribe to get updates and
               latest offers.
             </p>
@@ -232,38 +227,44 @@ const Footer = () => {
             <input
               type="email"
               placeholder="Enter your email"
-              className="w-full mt-6 bg-transparent border border-gray-600 rounded-lg px-4 py-3 outline-none focus:border-yellow-500"
+              className="w-full mt-6 bg-[#1a2026] border border-yellow-900/40 rounded-sm px-4 py-3 outline-none focus:border-yellow-600 text-[#e8e4db] placeholder:text-gray-600 shadow-inner"
             />
 
-            <button className="w-full bg-yellow-500 hover:bg-yellow-400 text-black font-semibold py-3 rounded-lg mt-4 transition">
+            <button className="w-full bg-yellow-700 hover:bg-yellow-600 text-white font-semibold py-3 rounded-sm mt-4 transition border border-yellow-600 shadow-sm uppercase tracking-wider text-sm">
               Subscribe
             </button>
 
-          </div>
+          </motion.div>
 
         </div>
 
         {/* Bottom Footer */}
 
-        <div className="border-t border-gray-700 mt-14 pt-8 flex flex-col md:flex-row justify-between items-center gap-5">
+        <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 1 }}
+          className="border-t border-yellow-900/30 mt-14 pt-8 flex flex-col md:flex-row justify-between items-center gap-5"
+        >
 
-          <p className="text-gray-400 text-sm">
+          <p className="text-gray-500 text-sm">
            © 2026 Generator Rent. All Rights Reserved.
           </p>
 
-          <div className="flex gap-6 text-gray-400 text-sm">
+          <div className="flex gap-6 text-gray-500 text-sm">
 
-            <p className="hover:text-yellow-500 cursor-pointer">
+            <p className="hover:text-yellow-600 cursor-pointer transition-colors">
               Privacy Policy
             </p>
 
-            <p className="hover:text-yellow-500 cursor-pointer">
+            <p className="hover:text-yellow-600 cursor-pointer transition-colors">
               Terms & Conditions
             </p>
 
           </div>
 
-        </div>
+        </motion.div>
 
       </div>
 

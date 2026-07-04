@@ -122,9 +122,11 @@
     @apply border-border outline-ring/50;
     }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-[#fefcf8] text-[#2c1f11];
+    /* Using vintage elegant colors without literal dust overlay */
     }
   html {
-    @apply font-sans;
+    @apply font-serif;
+    scroll-behavior: smooth;
     }
 }

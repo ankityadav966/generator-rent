@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import { motion } from "framer-motion";
 
 import user1 from "../assets/user1.jpg";
 import user2 from "../assets/user2.jpg";
@@ -70,121 +71,126 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-24 bg-white">
-
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-24 bg-[#fdfbf7] font-serif relative">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
 
         {/* Heading */}
 
-        <div className="text-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.6 }}
+          className="text-center"
+        >
 
-          <p className="text-yellow-500 font-semibold uppercase">
+          <p className="text-yellow-700 font-semibold uppercase tracking-widest border-b border-yellow-700/30 inline-block pb-1">
             What Our Clients Say
           </p>
 
-          <h1 className="text-5xl font-bold mt-3">
+          <h1 className="text-5xl font-bold mt-5 text-gray-900 drop-shadow-sm">
             Happy Customers
           </h1>
 
-          <p className="text-gray-500 mt-4">
+          <p className="text-gray-600 mt-4 italic max-w-xl mx-auto">
             We value our customers and always strive
             for the best service.
           </p>
 
-        </div>
+        </motion.div>
 
         {/* Slider */}
 
-        <Swiper
-          modules={[Pagination, Autoplay]}
-
-          spaceBetween={30}
-
-          loop={true}
-
-          speed={1200}
-
-          autoplay={{
-            delay: 5000,
-            disableOnInteraction: false,
-          }}
-
-          pagination={{
-            clickable: true,
-          }}
-
-          breakpoints={{
-            0: {
-              slidesPerView: 1,
-            },
-
-            768: {
-              slidesPerView: 2,
-            },
-
-            1024: {
-              slidesPerView: 3,
-            },
-          }}
-
-          className="mt-16 pb-14"
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
         >
+          <Swiper
+            modules={[Pagination, Autoplay]}
+            spaceBetween={30}
+            loop={true}
+            speed={1200}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
+            className="mt-16 pb-14"
+          >
 
-          {testimonials.map((item, index) => (
+            {testimonials.map((item, index) => (
 
-            <SwiperSlide key={index}>
+              <SwiperSlide key={index}>
 
-              <div className="border rounded-2xl p-8 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 h-full bg-white">
+                <div className="border-2 border-yellow-800/20 rounded-none p-8 hover:shadow-[5px_5px_0px_rgba(180,83,9,0.3)] hover:-translate-y-1 hover:-translate-x-1 transition-all duration-300 h-full bg-[#fdfbf7] relative">
+                  {/* Vintage tape corner effect */}
+                  <div className="absolute -top-2 -left-2 w-8 h-4 bg-yellow-200/50 rotate-[-45deg] shadow-sm"></div>
 
-                {/* Stars */}
+                  {/* Stars */}
 
-                <div className="flex gap-1 text-yellow-500">
+                  <div className="flex gap-1 text-yellow-600">
 
-                  <Star fill="currentColor" size={18} />
-                  <Star fill="currentColor" size={18} />
-                  <Star fill="currentColor" size={18} />
-                  <Star fill="currentColor" size={18} />
-                  <Star fill="currentColor" size={18} />
+                    <Star fill="currentColor" size={18} />
+                    <Star fill="currentColor" size={18} />
+                    <Star fill="currentColor" size={18} />
+                    <Star fill="currentColor" size={18} />
+                    <Star fill="currentColor" size={18} />
 
-                </div>
+                  </div>
 
-                {/* Review */}
+                  {/* Review */}
 
-                <p className="text-gray-600 mt-6 leading-8">
-                  "{item.review}"
-                </p>
+                  <p className="text-gray-700 mt-6 leading-8 font-medium italic">
+                    "{item.review}"
+                  </p>
 
-                {/* User */}
+                  {/* User */}
 
-                <div className="flex items-center gap-4 mt-8">
+                  <div className="flex items-center gap-4 mt-8 pt-6 border-t border-yellow-900/10">
 
-                  <img
-                    src={item.image}
-                    alt=""
-                    className="w-14 h-14 rounded-full object-cover"
-                  />
+                    <img
+                      src={item.image}
+                      alt=""
+                      className="w-14 h-14 rounded-full object-cover grayscale-[50%] sepia-[40%] border-2 border-yellow-700/30"
+                    />
 
-                  <div>
+                    <div>
 
-                    <h2 className="font-bold text-lg">
-                      {item.name}
-                    </h2>
+                      <h2 className="font-bold text-lg text-gray-900">
+                        {item.name}
+                      </h2>
 
-                    <p className="text-gray-500 text-sm">
-                      {item.role}
-                    </p>
+                      <p className="text-gray-600 text-sm uppercase tracking-wide">
+                        {item.role}
+                      </p>
+
+                    </div>
 
                   </div>
 
                 </div>
 
-              </div>
+              </SwiperSlide>
 
-            </SwiperSlide>
+            ))}
 
-          ))}
-
-        </Swiper>
+          </Swiper>
+        </motion.div>
 
       </div>
 
