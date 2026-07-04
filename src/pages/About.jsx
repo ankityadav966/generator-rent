@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { motion } from "framer-motion";
 
 import {
   ShieldCheck,
@@ -16,78 +17,94 @@ const About = () => {
 
       {/* HERO */}
 
-      <section className="bg-black text-white py-28">
+      <section className="bg-[#0f1419] text-[#e8e4db] py-28 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dust.png')] opacity-10 pointer-events-none"></div>
 
-        <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24 text-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="w-full px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24 text-center relative z-10"
+        >
 
-          <p className="text-yellow-500 uppercase tracking-[4px] font-semibold">
+          <p className="text-yellow-600 uppercase tracking-[4px] font-semibold border-b border-yellow-900/50 inline-block pb-1">
             About Generator Rent
           </p>
 
-          <h1 className="text-5xl lg:text-7xl font-bold mt-6">
+          <h1 className="text-5xl lg:text-7xl font-bold mt-6 text-[#fdfbf7] drop-shadow-md font-serif">
             Powering Your Business,
             Events & Projects
           </h1>
 
-          <p className="max-w-4xl mx-auto text-xl text-gray-300 mt-8 leading-9">
+          <p className="max-w-4xl mx-auto text-xl text-gray-400 mt-8 leading-9 italic font-serif">
             We provide reliable generator rental services
             for industries, construction sites, events,
             commercial buildings and emergency backup
             requirements across the region.
           </p>
 
-        </div>
+        </motion.div>
 
       </section>
 
       {/* COMPANY STORY */}
 
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-[#fdfbf7] font-serif">
 
         <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24">
 
           <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-            <div>
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.8 }}
+            >
 
               <img
                 src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?w=1200"
                 alt=""
-                className="rounded-3xl shadow-xl"
+                className="rounded-3xl shadow-xl sepia-[0.3] border-4 border-yellow-900/10 hover:sepia-0 transition-all duration-700"
               />
 
-            </div>
+            </motion.div>
 
-            <div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
 
-              <span className="text-yellow-500 font-semibold uppercase">
+              <span className="text-yellow-700 font-semibold uppercase tracking-widest border-b border-yellow-700/30 inline-block pb-1">
                 Our Story
               </span>
 
-              <h2 className="text-5xl font-bold mt-4">
+              <h2 className="text-5xl font-bold mt-4 text-gray-900 drop-shadow-sm">
                 Trusted Generator Rental Partner
               </h2>
 
-              <p className="text-gray-600 mt-8 leading-8">
+              <p className="text-gray-700 mt-8 leading-8 text-lg italic">
                 Generator Rent was founded with a simple mission:
                 provide dependable power solutions whenever and
                 wherever customers need them.
               </p>
 
-              <p className="text-gray-600 mt-6 leading-8">
+              <p className="text-gray-700 mt-6 leading-8 text-lg italic">
                 Over the years, we have supplied generators
                 for construction projects, industrial operations,
                 corporate events, weddings, exhibitions,
                 hospitals and emergency situations.
               </p>
 
-              <p className="text-gray-600 mt-6 leading-8">
+              <p className="text-gray-700 mt-6 leading-8 text-lg italic">
                 Our experienced team ensures every generator
                 is maintained to the highest standards,
                 guaranteeing reliable performance and safety.
               </p>
 
-            </div>
+            </motion.div>
 
           </div>
 
@@ -97,40 +114,52 @@ const About = () => {
 
       {/* MISSION VISION */}
 
-      <section className="bg-gray-50 py-24">
+      <section className="bg-[#f4ebd8] py-24 font-serif relative border-y border-yellow-900/20">
 
         <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24">
 
           <div className="grid md:grid-cols-2 gap-10">
 
-            <div className="bg-white p-10 rounded-3xl shadow-sm">
-
-              <h2 className="text-4xl font-bold mb-6">
+            <motion.div 
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6 }}
+              className="bg-[#fdfbf7] p-10 rounded-3xl shadow-md border-2 border-yellow-900/10 relative"
+            >
+              <div className="absolute top-0 right-0 w-16 h-16 bg-yellow-200/40 rounded-bl-full shadow-inner"></div>
+              <h2 className="text-4xl font-bold mb-6 text-gray-900 drop-shadow-sm">
                 Our Mission
               </h2>
 
-              <p className="text-gray-600 leading-8">
+              <p className="text-gray-700 leading-8 text-lg italic">
                 To deliver affordable, reliable and
                 uninterrupted power solutions while
                 maintaining exceptional customer service
                 and operational excellence.
               </p>
 
-            </div>
+            </motion.div>
 
-            <div className="bg-white p-10 rounded-3xl shadow-sm">
-
-              <h2 className="text-4xl font-bold mb-6">
+            <motion.div 
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-[#fdfbf7] p-10 rounded-3xl shadow-md border-2 border-yellow-900/10 relative"
+            >
+              <div className="absolute top-0 right-0 w-16 h-16 bg-yellow-200/40 rounded-bl-full shadow-inner"></div>
+              <h2 className="text-4xl font-bold mb-6 text-gray-900 drop-shadow-sm">
                 Our Vision
               </h2>
 
-              <p className="text-gray-600 leading-8">
+              <p className="text-gray-700 leading-8 text-lg italic">
                 To become the most trusted generator rental
                 company by providing innovative power
                 solutions and unmatched customer support.
               </p>
 
-            </div>
+            </motion.div>
 
           </div>
 

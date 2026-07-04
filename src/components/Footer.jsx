@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import logo from "../assets/logo.jpeg";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -48,24 +49,24 @@ const Footer = () => {
             <div className="flex gap-4 mt-8">
 
               {/* Facebook */}
-              <div className="border border-yellow-700 w-11 h-11 rounded-full flex items-center justify-center hover:bg-yellow-700 hover:text-white hover:scale-110 transition-all cursor-pointer shadow-md">
+              <motion.div whileHover={{ scale: 1.1, rotate: 5 }} whileTap={{ scale: 0.9 }} className="border border-yellow-700 w-11 h-11 rounded-full flex items-center justify-center hover:bg-yellow-700 hover:text-white transition-colors cursor-pointer shadow-md">
                 <FaFacebookF size={16} />
-              </div>
+              </motion.div>
 
               {/* Instagram */}
-              <div className="border border-yellow-700 w-11 h-11 rounded-full flex items-center justify-center hover:bg-yellow-700 hover:text-white hover:scale-110 transition-all cursor-pointer shadow-md">
+              <motion.div whileHover={{ scale: 1.1, rotate: -5 }} whileTap={{ scale: 0.9 }} className="border border-yellow-700 w-11 h-11 rounded-full flex items-center justify-center hover:bg-yellow-700 hover:text-white transition-colors cursor-pointer shadow-md">
                 <FaInstagram size={16} />
-              </div>
+              </motion.div>
 
               {/* Youtube */}
-              <div className="border border-yellow-700 w-11 h-11 rounded-full flex items-center justify-center hover:bg-yellow-700 hover:text-white hover:scale-110 transition-all cursor-pointer shadow-md">
+              <motion.div whileHover={{ scale: 1.1, rotate: 5 }} whileTap={{ scale: 0.9 }} className="border border-yellow-700 w-11 h-11 rounded-full flex items-center justify-center hover:bg-yellow-700 hover:text-white transition-colors cursor-pointer shadow-md">
                 <FaYoutube size={16} />
-              </div>
+              </motion.div>
 
               {/* Twitter/X */}
-              <div className="border border-yellow-700 w-11 h-11 rounded-full flex items-center justify-center hover:bg-yellow-700 hover:text-white hover:scale-110 transition-all cursor-pointer shadow-md">
+              <motion.div whileHover={{ scale: 1.1, rotate: -5 }} whileTap={{ scale: 0.9 }} className="border border-yellow-700 w-11 h-11 rounded-full flex items-center justify-center hover:bg-yellow-700 hover:text-white transition-colors cursor-pointer shadow-md">
                 <FaXTwitter size={16} />
-              </div>
+              </motion.div>
 
             </div>
 
@@ -87,27 +88,27 @@ const Footer = () => {
             <ul className="space-y-4 text-gray-400">
 
               <li className="hover:text-yellow-500 hover:translate-x-1 transition-transform cursor-pointer">
-                Home
+                <Link to="/" className="block w-full">Home</Link>
               </li>
 
               <li className="hover:text-yellow-500 hover:translate-x-1 transition-transform cursor-pointer">
-                Generators
+                <Link to="/generators" className="block w-full">Generators</Link>
               </li>
 
               <li className="hover:text-yellow-500 hover:translate-x-1 transition-transform cursor-pointer">
-                About Us
+                <Link to="/about" className="block w-full">About Us</Link>
               </li>
 
               <li className="hover:text-yellow-500 hover:translate-x-1 transition-transform cursor-pointer">
-                How It Works
+                <Link to="/how-it-works" className="block w-full">How It Works</Link>
               </li>
 
               <li className="hover:text-yellow-500 hover:translate-x-1 transition-transform cursor-pointer">
-                FAQs
+                <Link to="/faq" className="block w-full">FAQs</Link>
               </li>
 
               <li className="hover:text-yellow-500 hover:translate-x-1 transition-transform cursor-pointer">
-                Contact Us
+                <Link to="/contact" className="block w-full">Contact Us</Link>
               </li>
 
             </ul>

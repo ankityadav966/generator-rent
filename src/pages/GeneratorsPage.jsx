@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 import {
   Filter,
@@ -327,74 +328,68 @@ const filteredGenerators = generators.filter((generator) => {
 
                 {filteredGenerators.map((item, index) => (
 
-                  <div
+                  <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.1 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
                     key={index}
-                    className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition"
+                    className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition relative border-2 border-yellow-900/10 hover:-translate-y-2 hover:-translate-x-1 hover:shadow-[5px_5px_0px_rgba(180,83,9,0.3)] duration-300"
                   >
+                    {/* Vintage Corner */}
+                    <div className="absolute top-2 right-2 w-8 h-8 border-t-2 border-r-2 border-yellow-700/40 z-10"></div>
+                    <div className="absolute bottom-2 left-2 w-8 h-8 border-b-2 border-l-2 border-yellow-700/40 z-10"></div>
 
                     <img
                       src={item.image}
                       alt=""
-                      className="w-full h-56 object-cover"
+                      className="w-full h-56 object-cover sepia-[0.2] hover:sepia-0 transition-all duration-500"
                     />
 
                     <div className="p-6">
 
-                      <h2 className="font-bold text-xl">
+                      <h2 className="font-bold text-xl text-gray-900 font-serif">
                         {item.name}
                       </h2>
 
-                      <h3 className="text-yellow-500 font-bold text-2xl mt-3">
+                      <h3 className="text-yellow-700 font-bold text-2xl mt-3 font-serif">
                         {item.price}
                       </h3>
 
-                      <div className="mt-6 space-y-3 text-sm">
+                      <div className="mt-6 space-y-3 text-sm text-gray-600 font-serif italic">
 
                         <div className="flex items-center gap-2">
-
-                          <Zap size={16} />
-
+                          <Zap size={16} className="text-yellow-600" />
                           Fuel Efficient
-
                         </div>
 
                         <div className="flex items-center gap-2">
-
-                          <Fuel size={16} />
-
+                          <Fuel size={16} className="text-yellow-600" />
                           Low Fuel Consumption
-
                         </div>
 
                         <div className="flex items-center gap-2">
-
-                          <ShieldCheck size={16} />
-
+                          <ShieldCheck size={16} className="text-yellow-600" />
                           24/7 Support
-
                         </div>
 
                       </div>
 
                       <div className="grid grid-cols-2 gap-3 mt-8">
 
-                        <button className="border border-yellow-500 text-yellow-500 py-3 rounded-xl font-semibold hover:bg-yellow-500 hover:text-black transition">
-
+                        <button className="border border-yellow-600 text-yellow-800 py-3 rounded-xl font-semibold hover:bg-yellow-600 hover:text-black transition">
                           Details
-
                         </button>
 
-                        <button className="bg-yellow-500 text-black py-3 rounded-xl font-semibold hover:bg-yellow-400 transition">
-
+                        <button className="bg-yellow-600 text-white py-3 rounded-xl font-semibold hover:bg-yellow-500 hover:text-black transition shadow-sm">
                           Book Now
-
                         </button>
 
                       </div>
 
                     </div>
 
-                  </div>
+                  </motion.div>
 
                 ))}
 
