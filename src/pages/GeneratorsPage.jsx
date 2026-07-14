@@ -12,6 +12,15 @@ import {
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
+import gen5kva from "../assets/gen_5kva.png";
+import gen15kva from "../assets/gen_15kva.png";
+import gen40kva from "../assets/gen_40kva.png";
+import gen62kva from "../assets/gen_62kva.png";
+import gen125kva from "../assets/gen_125kva.png";
+import gen160kva from "../assets/gen_160kva.png";
+import gen250kva from "../assets/gen_250kva.png";
+import gen500kva from "../assets/gen_500kva.png";
+
 
 const GeneratorsPage = () => {
 const [showFilters, setShowFilters] = useState(false);
@@ -21,66 +30,71 @@ const [durationFilters, setDurationFilters] = useState([]);
 
 
   const generators = [
-  {
-    name: "Diesel Generator 50 kVA",
-    capacity: "50 kVA",
-    fuel: "Diesel",
-    duration: ["Daily", "Weekly"],
-    price: "₹1,500 / Day",
-    image:
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800",
-  },
-
-  {
-    name: "Diesel Generator 125 kVA",
-    capacity: "125 kVA",
-    fuel: "Diesel",
-    duration: ["Daily", "Monthly"],
-    price: "₹2,500 / Day",
-    image:
-      "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800",
-  },
-
-  {
-    name: "Industrial Generator 250 kVA",
-    capacity: "250 kVA",
-    fuel: "Diesel",
-    duration: ["Weekly", "Monthly"],
-    price: "₹4,500 / Day",
-    image:
-      "https://images.unsplash.com/photo-1509395176047-4a66953fd231?w=800",
-  },
-
-  {
-    name: "Silent Generator 500 kVA",
-    capacity: "500 kVA",
-    fuel: "Diesel",
-    duration: ["Monthly"],
-    price: "₹8,000 / Day",
-    image:
-      "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=800",
-  },
-
-  {
-    name: "Construction Generator",
-    capacity: "250 kVA",
-    fuel: "Diesel",
-    duration: ["Daily"],
-    price: "₹3,000 / Day",
-    image:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800",
-  },
-
-  {
-    name: "Event Power Generator",
-    capacity: "125 kVA",
-    fuel: "Petrol",
-    duration: ["Daily", "Weekly"],
-    price: "₹2,800 / Day",
-    image:
-      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800",
-  },
-];
+    {
+      name: "Silent Generator 5 kVA",
+      capacity: "5 kVA",
+      fuel: "Diesel",
+      duration: ["Daily", "Weekly"],
+      price: "₹600 / Day",
+      image: gen5kva,
+    },
+    {
+      name: "Silent Generator 15 kVA",
+      capacity: "15 kVA",
+      fuel: "Diesel",
+      duration: ["Daily", "Weekly"],
+      price: "₹1,200 / Day",
+      image: gen15kva,
+    },
+    {
+      name: "Silent Generator 40 kVA",
+      capacity: "40 kVA",
+      fuel: "Diesel",
+      duration: ["Daily", "Weekly", "Monthly"],
+      price: "₹1,800 / Day",
+      image: gen40kva,
+    },
+    {
+      name: "Silent Generator 62 kVA",
+      capacity: "62 kVA",
+      fuel: "Diesel",
+      duration: ["Daily", "Weekly", "Monthly"],
+      price: "₹2,200 / Day",
+      image: gen62kva,
+    },
+    {
+      name: "Silent Generator 125 kVA",
+      capacity: "125 kVA",
+      fuel: "Diesel",
+      duration: ["Daily", "Weekly", "Monthly"],
+      price: "₹3,500 / Day",
+      image: gen125kva,
+    },
+    {
+      name: "Silent Generator 160 kVA",
+      capacity: "160 kVA",
+      fuel: "Diesel",
+      duration: ["Weekly", "Monthly"],
+      price: "₹4,500 / Day",
+      image: gen160kva,
+    },
+    {
+      name: "Silent Generator 250 kVA",
+      capacity: "250 kVA",
+      fuel: "Diesel",
+      duration: ["Weekly", "Monthly"],
+      price: "₹6,000 / Day",
+      image: gen250kva,
+    },
+    {
+      name: "Silent Generator 500 kVA",
+      capacity: "500 kVA",
+      fuel: "Diesel",
+      duration: ["Monthly"],
+      price: "₹10,000 / Day",
+      image: gen500kva,
+    },
+  ];
 const toggleFilter = (value, filters, setFilters) => {
   if (filters.includes(value)) {
     setFilters(filters.filter((item) => item !== value));
@@ -169,64 +183,22 @@ const filteredGenerators = generators.filter((generator) => {
                   </h3>
 
                   <div className="space-y-3">
-
-                    <label className="flex gap-2">
-<input
-  type="checkbox"
-  checked={capacityFilters.includes("50 kVA")}
-  onChange={() =>
-    toggleFilter(
-      "50 kVA",
-      capacityFilters,
-      setCapacityFilters
-    )
-  }
-/>                      50 kVA
-                    </label>
-
-                    <label className="flex gap-2">
-<input
-  type="checkbox"
-  checked={capacityFilters.includes("125 kVA")}
-  onChange={() =>
-    toggleFilter(
-      "125 kVA",
-      capacityFilters,
-      setCapacityFilters
-    )
-  }
-/>                      125 kVA
-                    </label>
-
-                    <label className="flex gap-2">
-                      <input
-  type="checkbox"
-  checked={capacityFilters.includes("250 kVA")}
-  onChange={() =>
-    toggleFilter(
-      "250 kVA",
-      capacityFilters,
-      setCapacityFilters
-    )
-  }
-/>
-                      250 kVA
-                    </label>
-
-                    <label className="flex gap-2">
-<input
-  type="checkbox"
-  checked={capacityFilters.includes("500 kVA")}
-  onChange={() =>
-    toggleFilter(
-      "500 kVA",
-      capacityFilters,
-      setCapacityFilters
-    )
-  }
-/>                      500 kVA
-                    </label>
-
+                    {["5 kVA", "15 kVA", "40 kVA", "62 kVA", "125 kVA", "160 kVA", "250 kVA", "500 kVA"].map((cap) => (
+                      <label key={cap} className="flex gap-2 items-center cursor-pointer">
+                        <input
+                          type="checkbox"
+                          checked={capacityFilters.includes(cap)}
+                          onChange={() =>
+                            toggleFilter(
+                              cap,
+                              capacityFilters,
+                              setCapacityFilters
+                            )
+                          }
+                        />
+                        {cap}
+                      </label>
+                    ))}
                   </div>
 
                 </div>
@@ -457,27 +429,22 @@ const filteredGenerators = generators.filter((generator) => {
       </h3>
 
       <div className="space-y-3">
-
-        <label className="flex gap-2">
-          <input type="checkbox" />
-          50 kVA
-        </label>
-
-        <label className="flex gap-2">
-          <input type="checkbox" />
-          125 kVA
-        </label>
-
-        <label className="flex gap-2">
-          <input type="checkbox" />
-          250 kVA
-        </label>
-
-        <label className="flex gap-2">
-          <input type="checkbox" />
-          500 kVA
-        </label>
-
+        {["5 kVA", "15 kVA", "40 kVA", "62 kVA", "125 kVA", "160 kVA", "250 kVA", "500 kVA"].map((cap) => (
+          <label key={cap} className="flex gap-2 items-center cursor-pointer">
+            <input
+              type="checkbox"
+              checked={capacityFilters.includes(cap)}
+              onChange={() =>
+                toggleFilter(
+                  cap,
+                  capacityFilters,
+                  setCapacityFilters
+                )
+              }
+            />
+            {cap}
+          </label>
+        ))}
       </div>
 
     </div>

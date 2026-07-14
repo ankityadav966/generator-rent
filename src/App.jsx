@@ -1,6 +1,6 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import { useEffect } from "react";
-import { FaWhatsapp } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import { FaWhatsapp, FaPhoneAlt, FaArrowUp } from "react-icons/fa";
 
 import Home from "./pages/Home";
 import GeneratorsPage from "./pages/GeneratorsPage";
@@ -22,6 +22,24 @@ const ScrollToTop = () => {
 };
 
 const App = () => {
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowScrollTop(true);
+      } else {
+        setShowScrollTop(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <>
       <ScrollToTop />
@@ -35,16 +53,39 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
       </Routes>
 
-      {/* Floating Animated WhatsApp Button */}
-      <a
-        href="https://wa.me/918854954525" // Assuming this is the number used earlier
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-[0_0_15px_rgba(34,197,94,0.6)] animate-pulse hover:animate-bounce hover:bg-green-600 transition-all duration-300 border-2 border-white/20"
-        title="Chat on WhatsApp"
-      >
-        <FaWhatsapp size={32} />
-      </a>
+      {/* Floating Action Buttons */}
+      <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3 items-center">
+        {/* Floating Animated WhatsApp Button */}
+        <a
+          href="https://wa.me/918854954525"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-green-500 text-white p-3 rounded-full shadow-[0_0_15px_rgba(34,197,94,0.6)] hover:bg-green-600 transition-all duration-300 border-2 border-white/20 flex items-center justify-center w-14 h-14 cursor-pointer hover:scale-110 shadow-lg animate-pulse"
+          title="Chat on WhatsApp"
+        >
+          <FaWhatsapp size={28} />
+        </a>
+
+        {/* Floating Call Button */}
+        <a
+          href="tel:+918854954525"
+          className="bg-green-600 text-white p-3 rounded-full shadow-[0_0_15px_rgba(22,163,74,0.6)] hover:bg-green-700 transition-all duration-300 border-2 border-white/20 flex items-center justify-center w-14 h-14 cursor-pointer hover:scale-110 shadow-lg"
+          title="Call Us"
+        >
+          <FaPhoneAlt size={22} />
+        </a>
+
+        {/* Scroll To Top Button */}
+        {showScrollTop && (
+          <button
+            onClick={scrollToTop}
+            className="bg-white text-gray-800 p-3 rounded-full shadow-lg hover:bg-gray-100 transition-all duration-300 border border-gray-200 flex items-center justify-center w-14 h-14 cursor-pointer hover:scale-110 shadow-md"
+            title="Scroll to Top"
+          >
+            <FaArrowUp size={20} />
+          </button>
+        )}
+      </div>
     </>
   );
 };

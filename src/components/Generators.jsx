@@ -1,40 +1,72 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
-import gen1 from "../assets/gen1.png";
-import gen2 from "../assets/gen2.png";
-import gen3 from "../assets/gen3.png";
-import gen4 from "../assets/gen4.png";
+import gen5kva from "../assets/gen_5kva.png";
+import gen15kva from "../assets/gen_15kva.png";
+import gen40kva from "../assets/gen_40kva.png";
+import gen62kva from "../assets/gen_62kva.png";
+import gen125kva from "../assets/gen_125kva.png";
+import gen160kva from "../assets/gen_160kva.png";
+import gen250kva from "../assets/gen_250kva.png";
+import gen500kva from "../assets/gen_500kva.png";
 
 const Generators = () => {
 
   const generators = [
     {
-      image: gen1,
-      title: "2 KVA Generator",
-      desc: "Ideal for home use",
-      price: "PKR 2,500 / Day",
-    },
-
-    {
-      image: gen2,
+      image: gen5kva,
       title: "5 KVA Generator",
-      desc: "Perfect for small offices",
+      desc: "Perfect for home backup & small shops",
       price: "PKR 4,000 / Day",
     },
 
     {
-      image: gen3,
+      image: gen15kva,
       title: "15 KVA Generator",
-      desc: "Suitable for shops & events",
+      desc: "Ideal for small offices & events",
       price: "PKR 8,000 / Day",
     },
 
     {
-      image: gen4,
-      title: "50 KVA Generator",
-      desc: "For industries & large sites",
-      price: "PKR 20,000 / Day",
+      image: gen40kva,
+      title: "40 KVA Generator",
+      desc: "Suitable for showrooms & commercial sites",
+      price: "PKR 15,000 / Day",
+    },
+
+    {
+      image: gen62kva,
+      title: "62 KVA Generator",
+      desc: "Great for building construction & events",
+      price: "PKR 22,000 / Day",
+    },
+
+    {
+      image: gen125kva,
+      title: "125 KVA Generator",
+      desc: "Heavy duty backup for industries & malls",
+      price: "PKR 35,000 / Day",
+    },
+
+    {
+      image: gen160kva,
+      title: "160 KVA Generator",
+      desc: "Ideal for large manufacturing plants",
+      price: "PKR 45,000 / Day",
+    },
+
+    {
+      image: gen250kva,
+      title: "250 KVA Generator",
+      desc: "Powerful backup solution for factories",
+      price: "PKR 60,000 / Day",
+    },
+
+    {
+      image: gen500kva,
+      title: "500 KVA Generator",
+      desc: "Ultimate heavy duty power for massive sites",
+      price: "PKR 100,000 / Day",
     },
   ];
 
@@ -104,7 +136,7 @@ const Generators = () => {
 
               <Button className="w-full mt-5 bg-yellow-600 hover:bg-yellow-500 text-black border border-yellow-700 shadow-sm transition-transform hover:scale-[1.02]">
                 <a
-                  href="https://wa.me/916350650966"
+                  href="https://wa.me/918854954525"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-bold w-full h-full flex items-center justify-center"
