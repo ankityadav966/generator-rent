@@ -21,7 +21,7 @@ const Testimonials = () => {
   const testimonials = [
     {
       image: user1,
-      name: "Ali Raza",
+      name: "Rajesh Sharma",
       role: "Event Manager",
       review:
         "Excellent service! Generator was delivered on time and worked perfectly for our event.",
@@ -29,7 +29,7 @@ const Testimonials = () => {
 
     {
       image: user2,
-      name: "Sana Khan",
+      name: "Pooja Verma",
       role: "Business Owner",
       review:
         "Very reliable service at the best prices. Highly recommended for everyone.",
@@ -37,7 +37,7 @@ const Testimonials = () => {
 
     {
       image: user3,
-      name: "Usman Tariq",
+      name: "Vikram Singh",
       role: "Site Supervisor",
       review:
         "24/7 support is amazing. They helped us in an emergency and saved the day!",
@@ -47,7 +47,7 @@ const Testimonials = () => {
 
     {
       image: user1,
-      name: "Ali Raza",
+      name: "Rajesh Sharma",
       role: "Event Manager",
       review:
         "Excellent service! Generator was delivered on time and worked perfectly for our event.",
@@ -55,7 +55,7 @@ const Testimonials = () => {
 
     {
       image: user2,
-      name: "Sana Khan",
+      name: "Pooja Verma",
       role: "Business Owner",
       review:
         "Very reliable service at the best prices. Highly recommended for everyone.",
@@ -63,7 +63,7 @@ const Testimonials = () => {
 
     {
       image: user3,
-      name: "Usman Tariq",
+      name: "Vikram Singh",
       role: "Site Supervisor",
       review:
         "24/7 support is amazing. They helped us in an emergency and saved the day!",

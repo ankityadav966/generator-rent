@@ -21,7 +21,6 @@ import gen160kva from "../assets/gen_160kva.png";
 import gen250kva from "../assets/gen_250kva.png";
 import gen500kva from "../assets/gen_500kva.png";
 
-
 const GeneratorsPage = () => {
 const [showFilters, setShowFilters] = useState(false);
 const [capacityFilters, setCapacityFilters] = useState([]);
@@ -35,7 +34,7 @@ const [durationFilters, setDurationFilters] = useState([]);
       capacity: "5 kVA",
       fuel: "Diesel",
       duration: ["Daily", "Weekly"],
-      price: "₹600 / Day",
+      price: "₹2,000 / Day",
       image: gen5kva,
     },
     {
@@ -43,7 +42,7 @@ const [durationFilters, setDurationFilters] = useState([]);
       capacity: "15 kVA",
       fuel: "Diesel",
       duration: ["Daily", "Weekly"],
-      price: "₹1,200 / Day",
+      price: "₹2,000 / Day",
       image: gen15kva,
     },
     {
@@ -51,7 +50,7 @@ const [durationFilters, setDurationFilters] = useState([]);
       capacity: "40 kVA",
       fuel: "Diesel",
       duration: ["Daily", "Weekly", "Monthly"],
-      price: "₹1,800 / Day",
+      price: "₹3,000 / Day",
       image: gen40kva,
     },
     {
@@ -59,7 +58,7 @@ const [durationFilters, setDurationFilters] = useState([]);
       capacity: "62 kVA",
       fuel: "Diesel",
       duration: ["Daily", "Weekly", "Monthly"],
-      price: "₹2,200 / Day",
+      price: "₹15,000 / Month",
       image: gen62kva,
     },
     {
@@ -67,7 +66,7 @@ const [durationFilters, setDurationFilters] = useState([]);
       capacity: "125 kVA",
       fuel: "Diesel",
       duration: ["Daily", "Weekly", "Monthly"],
-      price: "₹3,500 / Day",
+      price: "₹20,000 / Month",
       image: gen125kva,
     },
     {
@@ -75,7 +74,7 @@ const [durationFilters, setDurationFilters] = useState([]);
       capacity: "160 kVA",
       fuel: "Diesel",
       duration: ["Weekly", "Monthly"],
-      price: "₹4,500 / Day",
+      price: "₹25,000 / Month",
       image: gen160kva,
     },
     {
@@ -83,7 +82,7 @@ const [durationFilters, setDurationFilters] = useState([]);
       capacity: "250 kVA",
       fuel: "Diesel",
       duration: ["Weekly", "Monthly"],
-      price: "₹6,000 / Day",
+      price: "₹40,000 / Month",
       image: gen250kva,
     },
     {
@@ -91,7 +90,7 @@ const [durationFilters, setDurationFilters] = useState([]);
       capacity: "500 kVA",
       fuel: "Diesel",
       duration: ["Monthly"],
-      price: "₹10,000 / Day",
+      price: "₹75,000 / Month",
       image: gen500kva,
     },
   ];
@@ -314,8 +313,8 @@ const filteredGenerators = generators.filter((generator) => {
 
                     <img
                       src={item.image}
-                      alt=""
-                      className="w-full h-56 object-cover sepia-[0.2] hover:sepia-0 transition-all duration-500"
+                      alt={`${item.name} - Durga Generators Jaipur`}
+                      className="w-full h-56 object-contain p-2 bg-white hover:scale-105 transition-all duration-500"
                     />
 
                     <div className="p-6">

@@ -8,29 +8,29 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-import gen1 from "../assets/gen1.png";
-import gen2 from "../assets/gen2.png";
-import gen3 from "../assets/gen3.png";
 import { NavLink } from "react-router-dom";
+import gen5kva from "../assets/gen_5kva.png";
+import gen62kva from "../assets/gen_62kva.png";
+import gen250kva from "../assets/gen_250kva.png";
 
 const slides = [
   {
     title: "Reliable Home Power Backup",
     desc: "Keep your home running smoothly during power cuts with silent and efficient generators.",
     badge: "🏠 HOME POWER SOLUTION",
-    img: gen1,
+    img: gen5kva,
   },
   {
     title: "Event & Wedding Power Supply",
     desc: "High-capacity generators for weddings, parties and outdoor events without interruption.",
     badge: "🎉 EVENT POWER SOLUTION",
-    img: gen2,
+    img: gen62kva,
   },
   {
     title: "Industrial Heavy Duty Generators",
     desc: "Strong performance generators designed for construction sites and heavy workloads.",
     badge: "🏗️ INDUSTRIAL POWER",
-    img: gen3,
+    img: gen250kva,
   },
 ];
 
@@ -108,7 +108,7 @@ const Hero = () => {
                   <div className="absolute inset-0 bg-yellow-500/20 blur-[100px] rounded-full animate-pulse"></div>
                   <img
                     src={slide.img}
-                    alt="generator"
+                    alt={`${slide.title} - Durga Generators Jaipur`}
                     className="w-full h-[450px] object-contain relative z-10 drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] sepia-[0.3] hover:sepia-0 transition-all duration-700"
                   />
                 </div>

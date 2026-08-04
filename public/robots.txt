@@ -1,4 +1,13 @@
+# Durga Generator - Official robots.txt
+# Website: https://www.durgagenerator.com/
+
 User-agent: *
 Allow: /
+Allow: /assets/
+Allow: /images/
 
+# Sitemaps
 Sitemap: https://www.durgagenerator.com/sitemap.xml
+
+# Crawl-delay for polite scraping (if needed)
+# Crawl-delay: 1

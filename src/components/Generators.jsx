@@ -17,56 +17,56 @@ const Generators = () => {
       image: gen5kva,
       title: "5 KVA Generator",
       desc: "Perfect for home backup & small shops",
-      price: "PKR 4,000 / Day",
+      price: "₹2,000 / Day",
     },
 
     {
       image: gen15kva,
       title: "15 KVA Generator",
       desc: "Ideal for small offices & events",
-      price: "PKR 8,000 / Day",
+      price: "₹2,000 / Day",
     },
 
     {
       image: gen40kva,
       title: "40 KVA Generator",
       desc: "Suitable for showrooms & commercial sites",
-      price: "PKR 15,000 / Day",
+      price: "₹3,000 / Day",
     },
 
     {
       image: gen62kva,
       title: "62 KVA Generator",
       desc: "Great for building construction & events",
-      price: "PKR 22,000 / Day",
+      price: "₹15,000 / Month",
     },
 
     {
       image: gen125kva,
       title: "125 KVA Generator",
       desc: "Heavy duty backup for industries & malls",
-      price: "PKR 35,000 / Day",
+      price: "₹20,000 / Month",
     },
 
     {
       image: gen160kva,
       title: "160 KVA Generator",
       desc: "Ideal for large manufacturing plants",
-      price: "PKR 45,000 / Day",
+      price: "₹25,000 / Month",
     },
 
     {
       image: gen250kva,
       title: "250 KVA Generator",
       desc: "Powerful backup solution for factories",
-      price: "PKR 60,000 / Day",
+      price: "₹40,000 / Month",
     },
 
     {
       image: gen500kva,
       title: "500 KVA Generator",
       desc: "Ultimate heavy duty power for massive sites",
-      price: "PKR 100,000 / Day",
+      price: "₹75,000 / Month",
     },
   ];
 
@@ -118,7 +118,7 @@ const Generators = () => {
 
               <img
                 src={item.image}
-                alt=""
+                alt={`${item.title} - Durga Generators Jaipur`}
                 className="w-full h-44 object-contain sepia-[0.3] hover:sepia-0 transition-all duration-500"
               />
 

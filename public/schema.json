@@ -1,0 +1,131 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.durgagenerator.com/#localbusiness",
+      "name": "Durga Generator",
+      "alternateName": ["Durga Generators Jaipur", "Durga DG Set Rental"],
+      "url": "https://www.durgagenerator.com/",
+      "logo": "https://www.durgagenerator.com/favicon.jpeg",
+      "image": "https://www.durgagenerator.com/favicon.jpeg",
+      "description": "Durga Generator is Jaipur's leading supplier of silent diesel generators on rent (5 kVA to 500 kVA). Authorized Kirloskar Green Dealer providing 24/7 power backup, generator sales, maintenance, and emergency DG set rental across Jaipur & Rajasthan.",
+      "telephone": "+918854954525",
+      "email": "info@durgagenerator.com",
+      "priceRange": "₹₹",
+      "currenciesAccepted": "INR",
+      "paymentAccepted": "Cash, Credit Card, UPI, Bank Transfer",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Govind Nagar, Plot No. 64, Harmada, Near VKI Industrial Area",
+        "addressLocality": "Jaipur",
+        "addressRegion": "Rajasthan",
+        "postalCode": "302013",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 26.9859,
+        "longitude": 75.7678
+      },
+      "hasMap": "https://maps.google.com/?q=26.9859,75.7678",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Jaipur"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "VKI Industrial Area Jaipur"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Sitapura Industrial Area Jaipur"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Mansarovar Jaipur"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Vaishali Nagar Jaipur"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Rajasthan"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/durgagenerator",
+        "https://www.instagram.com/durgagenerator",
+        "https://www.linkedin.com/company/durgagenerator"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "148",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.durgagenerator.com/#organization",
+      "name": "Durga Generator",
+      "url": "https://www.durgagenerator.com/",
+      "logo": "https://www.durgagenerator.com/favicon.jpeg",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+918854954525",
+        "contactType": "customer service",
+        "areaServed": "IN",
+        "availableLanguage": ["English", "Hindi"]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.durgagenerator.com/#website",
+      "url": "https://www.durgagenerator.com/",
+      "name": "Durga Generator",
+      "description": "Silent Generator Rental & DG Set Sales Service in Jaipur, Rajasthan",
+      "publisher": {
+        "@id": "https://www.durgagenerator.com/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.durgagenerator.com/generators?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.durgagenerator.com/#service-rental",
+      "name": "Silent Diesel Generator Rental Service",
+      "provider": {
+        "@id": "https://www.durgagenerator.com/#localbusiness"
+      },
+      "serviceType": "Generator Rental Service",
+      "areaServed": {
+        "@type": "State",
+        "name": "Rajasthan"
+      },
+      "description": "High performance, fuel-efficient silent DG sets on rent ranging from 5 kVA to 500 kVA for commercial, industrial, event, and home power backup in Jaipur."
+    }
+  ]
+}

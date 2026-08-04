@@ -14,7 +14,7 @@ const Navbar = () => {
         {/* Logo */}
 
         <div className="flex items-center gap-3 animate-slide-in-left animate-duration-1000 py-2">
-          <img style={{width:"180px"}} src={logo} alt="Logo" className="sepia-[0.2] hover:sepia-0 transition-all duration-300 drop-shadow-sm" />
+          <img style={{width:"180px"}} src={logo} alt="Durga Generators - Best Silent Generator on Rent in Jaipur" className="sepia-[0.2] hover:sepia-0 transition-all duration-300 drop-shadow-sm" />
         </div>
 
         {/* Menu */}
